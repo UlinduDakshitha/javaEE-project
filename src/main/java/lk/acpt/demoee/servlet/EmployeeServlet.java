@@ -15,6 +15,7 @@ public class EmployeeServlet extends HttpServlet {
     private final EmployeeService service = new EmployeeServiceImpl();
     private final Gson gson = new Gson();
 
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("application/json");
@@ -35,6 +36,8 @@ public class EmployeeServlet extends HttpServlet {
         }
     }
 
+
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         BufferedReader reader = req.getReader();
@@ -44,12 +47,16 @@ public class EmployeeServlet extends HttpServlet {
         resp.getWriter().write("Saved Successfully");
     }
 
+
+
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String nic = req.getParameter("nic");
         service.deleteEmployee(nic);
         resp.getWriter().write("Deleted Successfully");
     }
+
+
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
