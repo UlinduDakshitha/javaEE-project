@@ -3,7 +3,9 @@ package lk.acpt.demoee.Service;
 import lk.acpt.demoee.dto.EmployeeDto;
 import java.util.List;
 
+
 public interface EmployeeService {
+
 
     void saveEmployee(EmployeeDto dto);
 
