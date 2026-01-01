@@ -102,6 +102,8 @@
 
 <script>
     // When an employee is loaded for editing this becomes true
+
+
     let isLoaded = false;
 
     function saveEmployee() {
